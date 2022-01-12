@@ -1,16 +1,20 @@
 import java.util.Scanner;
 import facade.ComputadorFACADE;
+import state.State;
+import state.TVContext;
+import state.TVStartState;
+import state.TVStopState;
 
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println("Olá para aprender mais sobre os padrões digite um dos números: ");
+		System.out.println("Olá para aprender mais sobre os padrões de design de software digite um dos números: ");
 		System.out.println("Para Facade digite 1 \n"
-				          + "Para Facade digite 2 ");
+				          + "Para State digite 2 ");
 		
 		
 		Scanner numero = new Scanner(System.in);
-		
+	
 		int num = numero.nextInt();
 	
 		if (num == 1) {
@@ -27,7 +31,24 @@ public class Main {
 	        facade.Executar();
 			
 			
+		}if (num == 2) {
+			
+			
+			TVContext context = new TVContext();
+			State tvStartState = new TVStartState();
+			State tvStopState = new TVStopState();
+			
+			context.setState(tvStartState);
+			context.doAction();
+			
+			
+			context.setState(tvStopState);
+			context.doAction();
 		}
+			
+			
+			
+			
 		
 		
 	 numero.close();	
