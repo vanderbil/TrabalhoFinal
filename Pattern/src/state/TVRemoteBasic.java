@@ -10,9 +10,9 @@ private String state =" ";
 	
 	public void doAction(){
 		if(state.equalsIgnoreCase("ON")){
-			System.out.println("TV is turned ON");
+			System.out.println("TV está ligada");
 		}else if(state.equalsIgnoreCase("OFF")){
-			System.out.println("TV is turned OFF");
+			System.out.println("TV está desligada");
 		}
 	}
 

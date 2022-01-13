@@ -36,12 +36,12 @@ public class Main {
 					+ "De acordo com a definição, um estado permite que um objeto altere seu comportamento quando seu estado interno muda.\n"
 					+ " O objeto parecerá mudar sua classe.Deve haver uma classe concreta separada para cada estado possível de um objeto.\n "
 					+ "Cada objeto de estado concreto terá lógica para aceitar ou rejeitar uma solicitação de transição de estado com base em seu estado atual\n"
-					+ " e nas informações de contexto passadas a ele como argumentos de método.\n");
+					+ "e nas informações de contexto passadas a ele como argumentos de método.\n");
 			System.out.println("Nesse exemplo podemos mudar o estado da TV pressionando os botões do controle remoto. Mas o estado da TV mudará ou não,\n "
 					+ "depende do estado atual da TV.\n"
-					+ " Se a TV estiver LIGADA, podemos desligá-la, silenciar ou alterar os aspectos e a fonte.\n"
+					+ "Se a TV estiver LIGADA, podemos desligá-la, silenciar ou alterar os aspectos e a fonte.\n"
 					+ "Mas se a TV estiver desligada, nada acontecerá quando pressionamos os botões do controle remoto.\n"
-					+ "Para uma TV desligada. apenas o próximo estado possível pode ser LIGADO.\n");
+					+ "Para uma TV desligada. apenas o próximo estado possível pode ser LIGADO.");
 			TVContext context = new TVContext();
 			State tvStartState = new TVStartState();
 			State tvStopState = new TVStopState();
