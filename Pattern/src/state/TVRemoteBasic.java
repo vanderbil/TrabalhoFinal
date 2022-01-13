@@ -16,7 +16,7 @@ private String state =" ";
 		}
 	}
 
-	public void TVRemoteBasic() {                                                  
+	public TVRemoteBasic() {                                                  
 		TVRemoteBasic remote = new TVRemoteBasic();
 		
 		remote.setState("ON");
