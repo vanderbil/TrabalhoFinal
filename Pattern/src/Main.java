@@ -20,7 +20,7 @@ public class Main {
 		System.out.println("Olá para aprender mais sobre os padrões de design de software digite um dos números: ");
 		System.out.println("Para Facade digite 1\n"
 				          +"Para State digite 2\n"
-				          +"Para State digite 2\n"
+				          +"Para Abstract Factory digite 3\n"
 				          +"Para State digite 2\n"
 				          +"Para State digite 2\n"
 				
@@ -50,7 +50,7 @@ public class Main {
 					+ "De acordo com a definição, um estado permite que um objeto altere seu comportamento quando seu estado interno muda.\n"
 					+ "O objeto parecerá mudar sua classe.Deve haver uma classe concreta separada para cada estado possível de um objeto.\n"
 					+ "Cada objeto de estado concreto terá lógica para aceitar ou rejeitar uma solicitação de transição de estado com base em seu estado atual\n"
-					+ "e nas informações de contexto passadas a ele como argumentos de método.\n");
+					+ "e nas informações de contexto passadas a ele como argumentos de método.");
 			System.out.println("Nesse exemplo podemos mudar o estado da TV pressionando os botões do controle remoto. Mas o estado da TV mudará ou não,\n"
 					+ "depende do estado atual da TV.\n"
 					+ "Se a TV estiver LIGADA, podemos desligá-la, silenciar ou alterar os aspectos e a fonte.\n"
@@ -68,6 +68,15 @@ public class Main {
 			context.doAction();
 			    
 		}if (num == 3) {
+			System.out.println("O Padrão  Abstract Factory é do tipo criacional.\n"
+					+"pois esse padrão fornece uma das melhores maneiras de criar um objeto.\n"
+					+"Os padrões Abstract Factory funcionam em torno de uma superfábrica que cria outras fábricas.\n" 
+					+"Esta fábrica também é chamada de fábrica de fábricas.\n"
+					+"No padrão Abstract Factory uma interface é responsável por criar uma fábrica de objetos relacionados sem especificar explicitamente suas classes.\n" 
+					+"Cada fábrica gerada pode fornecer os objetos conforme o padrão Factory.");
+			System.out.println("Nesse exemplo o metodo veiculo esta relacionado com com dois modelos de carros sem especificar qual classe o objeto se relaciona.");		
+					
+					
          AbstractFactory offRoadFactory = FactoryProducer.getFactory("OffRoad");
 		
 		Veiculo carro1 = offRoadFactory.getVeiculo("X");
