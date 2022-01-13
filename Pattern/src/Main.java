@@ -69,7 +69,7 @@ public class Main {
 			    
 		}if (num == 3) {
 			System.out.println("O Padrão  Abstract Factory é do tipo criacional.\n"
-					+"pois esse padrão fornece uma das melhores maneiras de criar um objeto.\n"
+					+"Esse padrão fornece uma das melhores maneiras de criar um objeto.\n"
 					+"Os padrões Abstract Factory funcionam em torno de uma superfábrica que cria outras fábricas.\n" 
 					+"Esta fábrica também é chamada de fábrica de fábricas.\n"
 					+"No padrão Abstract Factory uma interface é responsável por criar uma fábrica de objetos relacionados sem especificar explicitamente suas classes.\n" 
@@ -93,9 +93,13 @@ public class Main {
 		Veiculo carro4 = streetFactory.getVeiculo("Y");
 		carro4.method();
 			
-		}	
+		}if (num == 4)	
 			
 		
+			
+			
+			
+			
 		
 	 numero.close();	
 
