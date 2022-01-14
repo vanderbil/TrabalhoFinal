@@ -22,6 +22,11 @@ import builder.CarBuilder;
 import builder.CarManualBuilder;
 import builder.Director;
 import builder.Manual;
+import chainscfresponsibility.AbstractHandler;
+import chainscfresponsibility.exampleOneTest;
+import chainscfresponsibility.HandlerInterface;
+import chainscfresponsibility.LogErrorHandler;
+import chainscfresponsibility.LogWarningHandler;
 
 
 
@@ -36,6 +41,10 @@ public class Main {
 		System.out.println("Olá para aprender mais sobre os padrões de design de software digite um dos números: ");
 		System.out.println("Para Facade digite 1\n"
 				          +"Para State digite 2\n"
+				          +"Para Abstract Factory digite 3\n"
+				          +"Para Bridge digite 4\n"
+				          +"Para Builder digite 5\n"
+				          +"Para State digite 6\n"
 				          +"Para Abstract Factory digite 3\n"
 				          +"Para Bridge digite 4\n"
 				          +"Para Builder digite 5\n"
