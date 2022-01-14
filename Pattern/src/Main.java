@@ -15,6 +15,11 @@ import state.State;
 import state.TVContext;
 import state.TVStartState;
 import state.TVStopState;
+import visitor.Elemento;
+import visitor.ElementoConcreto;
+import visitor.Sistema;
+import visitor.Visitor;
+import visitor.VisitorConcreto;
 import bridge.Transporte;
 import builder.Car;
 import builder.CarBuilder;
@@ -43,11 +48,6 @@ import memento.Originator;
 import proxy.Proxy;
 import proxy.Universidade;
 import proxy.UniversidadeProxy;
-import visitor.Elemento;
-import visitor.ElementoConcreto;
-import visitor.Sistema;
-import visitor.Visitor;
-import visitor.VisitorConcreto;
 
 
 
@@ -74,9 +74,7 @@ public class Main {
 				          +"Para Memento digite 10\n"
 				          +"Para Prototype digite 11\n"
 				          +"Para Proxy digite 12\n"
-				          +"Para Visitor digite 13\n"
-				
-				                                );
+				          +"Para Visitor digite 13\n");
 		
 		
 		Scanner numero = new Scanner(System.in);
@@ -92,7 +90,7 @@ public class Main {
 					+ "Tipicamente envolve uma única classe responsável por englobar uma série de membros requeridos pelo cliente.\n"
 					+ "Estes membros acessam o sistema em nome do Facade e escondem os detalhes de implementação.");
 			System.out.println("Nesse exemplo foi escondido toda a complexidade de um sistema computacional"
-					+ " atraz de uma fachada simples.");
+					+ " atraz de uma fachada simples.\n");
 			ComputadorFACADE facade = new ComputadorFACADE();
 	        facade.Executar();
 			
@@ -126,7 +124,7 @@ public class Main {
 					+"Esta fábrica também é chamada de fábrica de fábricas.\n"
 					+"No padrão Abstract Factory uma interface é responsável por criar uma fábrica de objetos relacionados sem especificar explicitamente suas classes.\n" 
 					+"Cada fábrica gerada pode fornecer os objetos conforme o padrão Factory.");
-			System.out.println("Nesse exemplo o metodo veiculo esta relacionado com com dois modelos de carros sem especificar qual classe o objeto se relaciona.");		
+			System.out.println("Nesse exemplo o metodo veiculo esta relacionado com com dois modelos de carros sem especificar qual classe o objeto se relaciona.\n");		
 					
 					
          AbstractFactory offRoadFactory = FactoryProducer.getFactory("OffRoad");
@@ -153,7 +151,7 @@ public class Main {
 					+ "parte especializada em uma abordagem, mas ligadas por uma composição.\n"
 					+"Composição que liga as duas pontas representaria a “ponte” de comunicação entre as entidades.\n");
 			System.out.println("No exemplo foi implementado a classe Veículo e a Interface Transporte que fazem parte da abistração\n"
-					+ "na parte da implementação representa as interfaces criadas que vão definir o comportamento da Abstração.");
+					+ "na parte da implementação representa as interfaces criadas que vão definir o comportamento da Abstração.\n");
 			System.out.println(" ---------------------------------------- ");
 
 	        Caminhao caminhao = new Caminhao("Scania", new Cargas());
@@ -267,7 +265,7 @@ public class Main {
 			System.out.println("No exemplo fio criado a classe ChatRoom que define a interface que os objetos Colleague usam para se comunicar,\n"
 					+ "na classe User se define a classe abstrata contendo uma única referência ao Mediador.\n"
 					+ "Na ChatRoom é encapsulada a lógica de interação entre objetos Colleague\n"
-					+ "em ChatUser os ConcreteColleagues comunicam-se apenas por meio do Mediator");
+					+ "em ChatUser os ConcreteColleagues comunicam-se apenas por meio do Mediator.\n");
 			IChatRoom chatroom = new ChatRoom();
 	         
 		        User user1 = new UsuarioPadrao(chatroom,"1", "Maria");
@@ -329,7 +327,7 @@ public class Main {
 					+"Pode controlar o acesso ao objeto original, permitindo que você execute\n"
 				    +"algo antes ou depois que a solicitação chega ao objeto original.\n");
 			System.out.println("No exemplo na classe Pxoxy é feito o comtrole de acesso ao objeto original.\n"
-					+"Na classe universidadeproxy é criado o objeto subistituto, que depois passa as requisiçoes ao objeto original.");
+					+"Na classe universidadeproxy é criado o objeto subistituto, que depois passa as requisiçoes ao objeto original.\n");
 			
 			Universidade universidade = new UniversidadeProxy("errado");
 	        System.out.println("Login Incorreto");
@@ -346,9 +344,31 @@ public class Main {
 	        
 	        
 	        
+		}if(num == 13) {
+			System.out.println("O Visitor é um padrão de projeto comportamental.\n"
+					+"Representa uma operação a ser realizada sobre elementos da estrutura de um objeto.\n"
+					+"O Visitor permite que se crie uma nova operação sem que se mude a classe dos elementos sobre as quais ela opera.\n"
+					+"Um resultado prático é a habilidade de adicionar novas funcionalidades a estruturas de um objeto pré-existente sem a necessidade de modificá-las.\n");
+			System.out.println("Nesse exemplo a classe Visitor declara uma operação de visitor para cada classe de Elemento Concreto na estrutura do objeto."
+					+"Dentro da classe VisitorConcreto é implementa cada operação declarada pelo Visitor.\n"
+					+"Cada operação implementa um fragmento do algoritmo definido para a classe de objeto correspondente na estrutura."
+					+"Na classe Elemento se define uma operação accept que leva um visitante como um argumento,\n"
+					+"já na clase Elemento Concreto é implementa uma operação accept que leva um visitante como argumento.\n"
+					+"Em Sistema é onde se pode enumerar seus elementos, fornecer uma interface de alto nível para permitir que o visitante visite seus elementos"
+					+"e pode ser um composite ou uma coleção tal como um lista ou um conjunto.\n");
+			
+			ElementoConcreto elementoConcreto = new ElementoConcreto();
+			VisitorConcreto visitorConcreto = new VisitorConcreto();
+			elementoConcreto.accept(visitorConcreto);
+			
+			
+			
+		}else if(num <1 || num > 13){
+			System.out.println("Seleção incorreta! digite novamente");
+			
 		}
 		
-		
+	
 		
 		
 	 numero.close();	

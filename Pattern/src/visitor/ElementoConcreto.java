@@ -6,4 +6,5 @@ public class ElementoConcreto extends Elemento {
 		super.accept(visitor);
 	}
 
+	
 }
