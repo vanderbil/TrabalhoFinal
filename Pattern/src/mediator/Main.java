@@ -6,10 +6,10 @@ public class Main
     {
         IChatRoom chatroom = new ChatRoom();
          
-        User user1 = new ChatUser(chatroom,"1", "Maria");
-        User user2 = new ChatUser(chatroom,"2", "José");
-        User user3 = new ChatUser(chatroom,"3", "João");
-        User user4 = new ChatUser(chatroom,"4", "Ana");
+        User user1 = new UsuarioPadrao(chatroom,"1", "Maria");
+        User user2 = new UsuarioPadrao(chatroom,"2", "José");
+        User user3 = new UsuarioPadrao(chatroom,"3", "João");
+        User user4 = new UsuarioPadrao(chatroom,"4", "Ana");
          
         chatroom.addUser(user1);
         chatroom.addUser(user2);

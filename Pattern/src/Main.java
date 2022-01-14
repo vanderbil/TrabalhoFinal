@@ -34,7 +34,7 @@ import flyweight.CounterStrike;
 import flyweight.Player;
 import flyweight.PlayerFactory;
 import mediator.ChatRoom;
-import mediator.ChatUser;
+import mediator.UsuarioPadrao;
 import mediator.IChatRoom;
 import mediator.User;
 
@@ -260,10 +260,10 @@ public class Main {
 					+ "em ChatUser os ConcreteColleagues comunicam-se apenas por meio do Mediator");
 			IChatRoom chatroom = new ChatRoom();
 	         
-		        User user1 = new ChatUser(chatroom,"1", "Maria");
-		        User user2 = new ChatUser(chatroom,"2", "José");
-		        User user3 = new ChatUser(chatroom,"3", "João");
-		        User user4 = new ChatUser(chatroom,"4", "Ana");
+		        User user1 = new UsuarioPadrao(chatroom,"1", "Maria");
+		        User user2 = new UsuarioPadrao(chatroom,"2", "José");
+		        User user3 = new UsuarioPadrao(chatroom,"3", "João");
+		        User user4 = new UsuarioPadrao(chatroom,"4", "Ana");
 		         
 		        chatroom.addUser(user1);
 		        chatroom.addUser(user2);

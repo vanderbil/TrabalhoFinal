@@ -2,9 +2,9 @@ package mediator;
 
 //colega concreto
 
-public class ChatUser extends User {
+public class UsuarioPadrao extends User {
     
-    public ChatUser(IChatRoom room, String id, String name) {
+    public UsuarioPadrao(IChatRoom room, String id, String name) {
         super(room, id, name);
     }
  
