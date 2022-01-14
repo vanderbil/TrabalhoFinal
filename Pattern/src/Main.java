@@ -45,6 +45,7 @@ import mediator.User;
 
 
 
+
 public class Main {
 
 	
@@ -244,7 +245,7 @@ public class Main {
 
 	            player.assignWeapon(getRandomWeapon());
 
-	            player.mission();
+	            player.mission();}
 		}if(num == 9) {
 			
 			 IChatRoom chatroom = new ChatRoom();
@@ -266,17 +267,15 @@ public class Main {
 		
 	 numero.close();	
 
-	}
+	
 
 	}
 
 	private static String getRandomPlayerType() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	private static String getRandomWeapon() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
