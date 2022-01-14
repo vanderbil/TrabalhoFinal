@@ -43,6 +43,11 @@ import memento.Originator;
 import proxy.Proxy;
 import proxy.Universidade;
 import proxy.UniversidadeProxy;
+import visitor.Elemento;
+import visitor.ElementoConcreto;
+import visitor.Sistema;
+import visitor.Visitor;
+import visitor.VisitorConcreto;
 
 
 
@@ -69,7 +74,7 @@ public class Main {
 				          +"Para Memento digite 10\n"
 				          +"Para Prototype digite 11\n"
 				          +"Para Proxy digite 12\n"
-				          +"Para Builder digite 13\n"
+				          +"Para Visitor digite 13\n"
 				
 				                                );
 		
