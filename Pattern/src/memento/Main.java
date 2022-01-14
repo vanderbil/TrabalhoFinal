@@ -4,7 +4,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Originator originador = new Originator();
-	    History armazenador = new History();
+	    Historico armazenador = new Historico();
 	    
 	    
 	    originador.setState("State #1");

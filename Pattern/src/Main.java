@@ -37,7 +37,7 @@ import mediator.ChatRoom;
 import mediator.UsuarioPadrao;
 import mediator.IChatRoom;
 import mediator.User;
-import memento.History;
+import memento.Historico;
 import memento.Memento;
 import memento.Originator;
 
@@ -290,7 +290,7 @@ public class Main {
 					+" Na classe Memento fica o registro de um objeto, representando seu estado em determinado momento.\n"
 					+ "Na classe Histiry fica armazenador que é responsável por armazenar e disponibilizar estados do objeto a partir de Mementos.\n");
 			Originator originador = new Originator();
-		    History armazenador = new History();
+		    Historico armazenador = new Historico();
 		    
 		    
 		    originador.setState("State #1");

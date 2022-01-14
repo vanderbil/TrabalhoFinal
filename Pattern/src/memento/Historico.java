@@ -2,7 +2,7 @@ package memento;
 
 import java.util.ArrayList;
 
-public class History {
+public class Historico {
    private ArrayList<Memento> mementoList = new ArrayList<Memento>();
 
    public void saveState(Memento state){
