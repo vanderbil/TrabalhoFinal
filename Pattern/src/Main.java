@@ -40,7 +40,9 @@ import mediator.User;
 import memento.Historico;
 import memento.Memento;
 import memento.Originator;
-
+import proxy.Proxy;
+import proxy.Universidade;
+import proxy.UniversidadeProxy;
 
 
 
@@ -64,9 +66,9 @@ public class Main {
 				          +"Para Composite digite 7\n"
 				          +"Para Flyweight digite 8\n"
 				          +"Para Mediator digite 9\n"
-				          +"Para Builder digite 10\n"
-				          +"Para Builder digite 11\n"
-				          +"Para Builder digite 12\n"
+				          +"Para Memento digite 10\n"
+				          +"Para Prototype digite 11\n"
+				          +"Para Proxy digite 12\n"
 				          +"Para Builder digite 13\n"
 				
 				                                );
@@ -312,6 +314,9 @@ public class Main {
 		    
 		    originador.setStateFromMemento(armazenador.getState(1));
 		    System.out.println("Second saved State ----- " + originador.getState());
+			
+		}if(num == 11) {
+			System.out.println("O arquivo  do código não abre. ");
 			
 		}	
 		
