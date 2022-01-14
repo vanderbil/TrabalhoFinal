@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import abstractfactory.AbstractFactory;
@@ -12,10 +13,6 @@ import state.State;
 import state.TVContext;
 import state.TVStartState;
 import state.TVStopState;
-import bridge.Caminhao;
-import bridge.Cargas;
-import bridge.Onibus;
-import bridge.Pessoas;
 import bridge.Transporte;
 import builder.Car;
 import builder.CarBuilder;
@@ -24,6 +21,9 @@ import builder.Director;
 import builder.Manual;
 import chainscfresponsibility.AbstractHandler;
 import chainscfresponsibility.exampleOneTest;
+import composite.Caixa;
+import composite.Item;
+import composite.Produto;
 import chainscfresponsibility.HandlerInterface;
 import chainscfresponsibility.LogErrorHandler;
 import chainscfresponsibility.LogInfoHandler;
@@ -45,8 +45,8 @@ public class Main {
 				          +"Para Abstract Factory digite 3\n"
 				          +"Para Bridge digite 4\n"
 				          +"Para Builder digite 5\n"
-				          +"Para State digite 6\n"
-				          +"Para Abstract Factory digite 3\n"
+				          +"Para Chain of Responsibility digite 6\n"
+				          +"Para Composite digite 7\n"
 				          +"Para Bridge digite 4\n"
 				          +"Para Builder digite 5\n"
 				
@@ -178,7 +178,7 @@ public class Main {
 					+ "entidades se comuniquem mais facilmente e flexivelmente. Este padrão,\n"
 					+ "especificamente, vincula uma cadeia de objetos via agregação possibilitando a cada\n"
 					+ "um desses objetos que realize uma responsabilidade e em seguida deleguea\n"
-					+ "execução ao próximo da sequência.");
+					+ "execução ao próximo da sequência.\n");
 			LogInfoHandler logInfoHandler = new LogInfoHandler();
 			LogWarningHandler logWarningHandler = new LogWarningHandler();
 			LogErrorHandler logErrorHandler = new LogErrorHandler();
@@ -190,6 +190,40 @@ public class Main {
 			String response = logInfoHandler.handle("error");
 			System.out.println(response);
 			
+			
+			
+		}if(num == 7) {
+			System.out.println("Composite um padrão de projeto de software utilizado para representar um objeto formado pela composição de objetos similares.\n"
+					+ " Este conjunto de objetos pressupõe uma mesma hierarquia de classes a que ele pertence.\n"
+					+ "Tal padrão é, normalmente, utilizado para representar listas recorrentes - ou recursivas - de elementos\n."
+					+ "Além disso, este modo de representação hierárquica de classes permite que os elementos contidos em um objeto composto sejam tratados como se fossem um objeto único.\n "
+					+ "Desta forma, os métodos comuns às classes podem ser aplicados, também, ao conjunto agrupado no objeto composto.\n");
+			System.out.println("Nesse exemplo foi implementado a classe Caixa que implementa a interface Item, representando um Produto composto.\n "
+					+ "Já o objeto Caixa pode conter Produtos ou até mesmo outras Caixas contendo Produtos.\n");
+			Caixa caixaMaster = new Caixa(new ArrayList<Item>()); 
+			
+			caixaMaster.addItem(new Produto("Clean Code: A Handbook of Agile Software Craftsmanship", 202.71));
+			
+			Caixa caixaSmartphones = new Caixa(new ArrayList<Item>()); 
+			caixaSmartphones.addItem(new Produto("Samsung Galaxy S21 Ultra 5G", 5000.10));
+			caixaSmartphones.addItem(new Produto("Samsung Galaxy S20 FE", 2189));
+			caixaSmartphones.addItem(new Produto("iPhone 13", 12000));
+			caixaSmartphones.addItem(new Produto("iPhone 13 mini", 4000));
+			caixaMaster.addItem(caixaSmartphones);
+			
+			Caixa caixaNotebooks = new Caixa(new ArrayList<Item>());
+			caixaNotebooks.addItem(new Produto("Acer Nitro AN515-44-R5YZ", 5499));
+			caixaNotebooks.addItem(new Produto("Dell G15", 5301));
+			caixaMaster.addItem(caixaNotebooks);
+			
+			Caixa caixaFerramentas = new Caixa(new ArrayList<Item>());
+			caixaFerramentas.addItem(new Produto("Martelo de Unha 25mm", 37.30));
+			caixaFerramentas.addItem(new Produto("Trena 5m", 17.10));
+			caixaFerramentas.addItem(new Produto("Alicate 7", 25));
+			caixaFerramentas.addItem(new Produto("Chave de Fenda Ponta Cruzada 1/8x6 Polegadas", 5.90));
+			caixaMaster.addItem(caixaFerramentas);
+			
+			System.out.println("VALOR TOTAL = " + caixaMaster.calcularPrecoFinal());
 			
 			
 		}	
