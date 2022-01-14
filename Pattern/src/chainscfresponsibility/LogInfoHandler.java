@@ -9,9 +9,7 @@ public class LogInfoHandler extends AbstractHandler{
 		
 		if(request=="info") {
 			result = "Requisição aceita:Tratando requisição de log de INFO.";
-			/* Aqui poderia ser usada qualquer lógica, como por exemplo 
-			   gravar o valor em um arquivo, mandar por e-mail, gravar no banco, etc.. 
-			 */
+			
 		}
 		return result;
 	}

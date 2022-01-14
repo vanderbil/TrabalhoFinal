@@ -26,6 +26,7 @@ import chainscfresponsibility.AbstractHandler;
 import chainscfresponsibility.exampleOneTest;
 import chainscfresponsibility.HandlerInterface;
 import chainscfresponsibility.LogErrorHandler;
+import chainscfresponsibility.LogInfoHandler;
 import chainscfresponsibility.LogWarningHandler;
 
 
@@ -169,6 +170,28 @@ public class Main {
 		        Manual carManual = manualBuilder.getResult();
 		        System.out.println("\nCar manual built:\n" + carManual.print());
 		    
+		}if(num == 6) {
+			
+			System.out.println("O padrão Chain of Responsibility é um padrão do tipo\n"
+					+ "comportamental, ou seja, foca nas relações entre os objetos,\n"
+					+ "fazendo com que essas\n"
+					+ "entidades se comuniquem mais facilmente e flexivelmente. Este padrão,\n"
+					+ "especificamente, vincula uma cadeia de objetos via agregação possibilitando a cada\n"
+					+ "um desses objetos que realize uma responsabilidade e em seguida deleguea\n"
+					+ "execução ao próximo da sequência.");
+			LogInfoHandler logInfoHandler = new LogInfoHandler();
+			LogWarningHandler logWarningHandler = new LogWarningHandler();
+			LogErrorHandler logErrorHandler = new LogErrorHandler();
+			
+			logInfoHandler.next(logWarningHandler);
+			logWarningHandler.next(logErrorHandler);
+			
+			
+			String response = logInfoHandler.handle("error");
+			System.out.println(response);
+			
+			
+			
 		}	
 			
 		
