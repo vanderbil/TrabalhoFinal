@@ -25,10 +25,10 @@ public class Manual {
 
     public String print() {
         String info = "";
-        info += "Type of car: " + carType + "\n";
-        info += "Count of seats: " + seats + "\n";
-        info += "Engine: volume - " + engine.getVolume() + "; mileage - " + engine.getMileage() + "\n";
-        info += "Transmission: " + transmission + "\n";
+        info += "Tipo do Carror: " + carType + "\n";
+        info += "Contagem de assentos: " + seats + "\n";
+        info += "Motor: volume - " + engine.getVolume() + "; mileage - " + engine.getMileage() + "\n";
+        info += "Transmissão: " + transmission + "\n";
         if (this.tripComputer != null) {
             info += "Trip Computer: Functional" + "\n";
         } else {

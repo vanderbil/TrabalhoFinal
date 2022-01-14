@@ -38,7 +38,7 @@ public class Main {
 				          +"Para State digite 2\n"
 				          +"Para Abstract Factory digite 3\n"
 				          +"Para Bridge digite 4\n"
-				          +"Para State digite 2\n"
+				          +"Para Builder digite 5\n"
 				
 				                                );
 		
@@ -132,7 +132,11 @@ public class Main {
 			
 			
 		}if (num == 5) {
-			
+			System.out.println("O Builder é um padrão de projeto criacional que permite a você construir objetos\n "
+					+ "complexos passo a passo. O padrão permite que você produza diferentes tipos e representações\n"
+					+ "de um objeto usando o mesmo código de construção.\n"
+					+ "Após implementar o padrão, você não vai mais precisar\n"
+					+ "amontoar dúzias de parâmetros em seus construtores.\n");
 			
 			 Director director = new Director();
 
