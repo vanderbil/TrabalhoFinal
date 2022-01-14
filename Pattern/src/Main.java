@@ -59,8 +59,12 @@ public class Main {
 				          +"Para Builder digite 5\n"
 				          +"Para Chain of Responsibility digite 6\n"
 				          +"Para Composite digite 7\n"
-				          +"Para Bridge digite 4\n"
-				          +"Para Builder digite 5\n"
+				          +"Para Flyweight digite 8\n"
+				          +"Para Mediator digite 9\n"
+				          +"Para Builder digite 10\n"
+				          +"Para Builder digite 11\n"
+				          +"Para Builder digite 12\n"
+				          +"Para Builder digite 13\n"
 				
 				                                );
 		
@@ -247,8 +251,14 @@ public class Main {
 
 	            player.mission();}
 		}if(num == 9) {
-			
-			 IChatRoom chatroom = new ChatRoom();
+			System.out.println("O padrão Mediator é um dos padrões de design comportamental, portanto, trata dos comportamentos dos objetos.\n"
+					+ "É utilizado para fornecer um meio de comunicação centralizado entre diferentes objetos em um sistema,\n"
+					+ "quando a lógica de comunicação entre objetos é complexa, possibilitando ter um ponto central de comunicação que cuida da lógica de comunicação.\n");
+			System.out.println("No exemplo fio criado a classe ChatRoom que define a interface que os objetos Colleague usam para se comunicar,\n"
+					+ "na classe User se define a classe abstrata contendo uma única referência ao Mediador.\n"
+					+ "Na ChatRoom é encapsulada a lógica de interação entre objetos Colleague\n"
+					+ "em ChatUser os ConcreteColleagues comunicam-se apenas por meio do Mediator");
+			IChatRoom chatroom = new ChatRoom();
 	         
 		        User user1 = new ChatUser(chatroom,"1", "Maria");
 		        User user2 = new ChatUser(chatroom,"2", "José");
