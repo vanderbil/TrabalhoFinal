@@ -37,6 +37,9 @@ import mediator.ChatRoom;
 import mediator.UsuarioPadrao;
 import mediator.IChatRoom;
 import mediator.User;
+import memento.History;
+import memento.Memento;
+import memento.Originator;
 
 
 
@@ -273,7 +276,47 @@ public class Main {
 		        
 		        user1.send("Hello brian", "2");
 		        user2.send("Hey buddy", "1");
+		
+		
+		
+		
+		}if(num == 10) {
+			System.out.println("O padrão comportamental Memento foi criado com o intuito de\n"
+					+"armazenar e recuperar os estados anteriores de um objeto, dessa forma, é\n"
+					+"produzido um ‘registro’ ou histórico dele. Este padrão é extremamente\n"
+					+"importante para aplicações que necessitam oferecer uma maneira de desfazer\n"
+					+"ações como restaurar imagens, textos etc.\n");
+			System.out.println("Nesse exemplo foi criado na classe originador, o metodo que salva o estado atual e cujo estado se deseja capturar.\n"
+					+" Na classe Memento fica o registro de um objeto, representando seu estado em determinado momento.\n"
+					+ "Na classe Histiry fica armazenador que é responsável por armazenar e disponibilizar estados do objeto a partir de Mementos.\n");
+			Originator originador = new Originator();
+		    History armazenador = new History();
+		    
+		    
+		    originador.setState("State #1");
+		    
+		    
+		    originador.setState("State #2");
+		    armazenador.saveState(originador.generateMemento());
+		    
+		    
+		    originador.setState("State #3");
+		    armazenador.saveState(originador.generateMemento());
+		    
+		    
+		    originador.setState("State #4");
+		    System.out.println("Current State: " + originador.getState());		
+		    
+		    originador.setStateFromMemento(armazenador.getState(0));
+		    System.out.println("First saved State ----- " + originador.getState());
+		    
+		    originador.setStateFromMemento(armazenador.getState(1));
+		    System.out.println("Second saved State ----- " + originador.getState());
+			
 		}	
+		
+		
+		
 		
 	 numero.close();	
 
