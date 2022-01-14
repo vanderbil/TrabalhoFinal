@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
+import java.util.HashMap;
 
 import abstractfactory.AbstractFactory;
 import abstractfactory.FactoryProducer;
@@ -28,6 +30,13 @@ import chainscfresponsibility.HandlerInterface;
 import chainscfresponsibility.LogErrorHandler;
 import chainscfresponsibility.LogInfoHandler;
 import chainscfresponsibility.LogWarningHandler;
+import flyweight.CounterStrike;
+import flyweight.Player;
+import flyweight.PlayerFactory;
+import mediator.ChatRoom;
+import mediator.ChatUser;
+import mediator.IChatRoom;
+import mediator.User;
 
 
 
@@ -38,7 +47,9 @@ import chainscfresponsibility.LogWarningHandler;
 
 public class Main {
 
-	public static void main(String[] args) {
+	
+
+	public static  void main(String[] args) {
 		System.out.println("Olá para aprender mais sobre os padrões de design de software digite um dos números: ");
 		System.out.println("Para Facade digite 1\n"
 				          +"Para State digite 2\n"
@@ -226,16 +237,48 @@ public class Main {
 			System.out.println("VALOR TOTAL = " + caixaMaster.calcularPrecoFinal());
 			
 			
+		}if(num == 8){
+			System.out.println("Não roda, não consigo arrumar.");
+			for (int i = 0; i < 4; i++) {
+	            Player player = PlayerFactory.getPlayer(getRandomPlayerType());
+
+	            player.assignWeapon(getRandomWeapon());
+
+	            player.mission();
+		}if(num == 9) {
+			
+			 IChatRoom chatroom = new ChatRoom();
+	         
+		        User user1 = new ChatUser(chatroom,"1", "Maria");
+		        User user2 = new ChatUser(chatroom,"2", "José");
+		        User user3 = new ChatUser(chatroom,"3", "João");
+		        User user4 = new ChatUser(chatroom,"4", "Ana");
+		         
+		        chatroom.addUser(user1);
+		        chatroom.addUser(user2);
+		        chatroom.addUser(user3);
+		        chatroom.addUser(user4);
+
+		        
+		        user1.send("Hello brian", "2");
+		        user2.send("Hey buddy", "1");
 		}	
-			
-		
-			
-			
-			
-			
 		
 	 numero.close();	
 
 	}
 
+	}
+
+	private static String getRandomPlayerType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private static String getRandomWeapon() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
+	
