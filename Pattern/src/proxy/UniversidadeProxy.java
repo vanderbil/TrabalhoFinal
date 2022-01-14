@@ -13,7 +13,7 @@ public class UniversidadeProxy extends Universidade {
         if (verificarLogin()) {
             return super.getNomeInstituicao();
         }
-        return "Institui√ß√£o inv√°lida";
+        return "InstituiÁ„o inv·lida";
     }
 
     @Override
@@ -21,7 +21,7 @@ public class UniversidadeProxy extends Universidade {
         if (verificarLogin()) {
             return super.getNomeCurso();
         }
-        return "Nome Inv√°lido";
+        return "Nome Inv·lido";
     }
 
     private boolean verificarLogin() {

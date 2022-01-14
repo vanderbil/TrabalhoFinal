@@ -318,7 +318,30 @@ public class Main {
 		}if(num == 11) {
 			System.out.println("O arquivo  do código não abre. ");
 			
-		}	
+		}if(num == 12) {
+			System.out.println("O Padrão de projeto proxy é do tipo estrutural.\n"
+					+"O proxy fornece um substituto ou um espaço reservado para outro objeto.\n"
+					+"Pode controlar o acesso ao objeto original, permitindo que você execute\n"
+				    +"algo antes ou depois que a solicitação chega ao objeto original.\n");
+			System.out.println("No exemplo na classe Pxoxy é feito o comtrole de acesso ao objeto original.\n"
+					+"Na classe universidadeproxy é criado o objeto subistituto, que depois passa as requisiçoes ao objeto original.");
+			
+			Universidade universidade = new UniversidadeProxy("errado");
+	        System.out.println("Login Incorreto");
+	        System.out.println(universidade.getNomeInstituicao());
+	        System.out.println(universidade.getNomeCurso());
+	        System.out.println("");
+	        System.out.println("----------------------------");
+	        System.out.println("");
+	        universidade = new UniversidadeProxy("correto");
+	        System.out.println("Login valido");
+	        System.out.println(universidade.getNomeInstituicao());
+	        System.out.println(universidade.getNomeCurso());
+	        
+	        
+	        
+	        
+		}
 		
 		
 		
