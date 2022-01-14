@@ -3,11 +3,11 @@ package bridge;
 public class Cargas implements Transporte {
     @Override
     public void transportar() {
-        System.out.println("VeÃ­culo Transportando Cargas");
+        System.out.println("Veículo Transportando Cargas");
     }
 
     @Override
     public void descricaoTransporte() {
-        System.out.println("VeÃ­culo que Transporta Cargas");
+        System.out.println("Veículo que Transporta Cargas");
     }
 }

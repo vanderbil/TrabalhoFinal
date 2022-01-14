@@ -111,7 +111,7 @@ public class Main {
 					+ "forma, se monta uma hierarquia baseada em duas ou mais classes distintas, cada\n"
 					+ "parte especializada em uma abordagem, mas ligadas por uma composição.\n"
 					+"Composição que liga as duas pontas representaria a “ponte” de comunicação entre as entidades.\n");
-			System.out.println("No exemplo foi implementado a classe Veículo e a Interface Transporte que fazem parte da abistração"
+			System.out.println("No exemplo foi implementado a classe Veículo e a Interface Transporte que fazem parte da abistração\n"
 					+ "na parte da implementação representa as interfaces criadas que vão definir o comportamento da Abstração.");
 			System.out.println(" ---------------------------------------- ");
 
