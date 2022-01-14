@@ -3,11 +3,22 @@ import java.util.Scanner;
 import abstractfactory.AbstractFactory;
 import abstractfactory.FactoryProducer;
 import abstractfactory.Veiculo;
+import bridge.Caminhao;
+import bridge.Cargas;
+import bridge.Onibus;
+import bridge.Pessoas;
 import facade.ComputadorFACADE;
 import state.State;
 import state.TVContext;
 import state.TVStartState;
 import state.TVStopState;
+import bridge.Caminhao;
+import bridge.Cargas;
+import bridge.Onibus;
+import bridge.Pessoas;
+import bridge.Transporte;
+
+
 
 
 
@@ -21,7 +32,7 @@ public class Main {
 		System.out.println("Para Facade digite 1\n"
 				          +"Para State digite 2\n"
 				          +"Para Abstract Factory digite 3\n"
-				          +"Para State digite 2\n"
+				          +"Para Bridge digite 4\n"
 				          +"Para State digite 2\n"
 				
 				                                );
@@ -93,7 +104,29 @@ public class Main {
 		Veiculo carro4 = streetFactory.getVeiculo("Y");
 		carro4.method();
 			
-		}if (num == 4)	
+		}if (num == 4) {
+			System.out.println("O Padrão Bridge é um padrão Estrutural.\n"
+					+ "Ele define a organização do projeto a ser implementado. É baseado na ideia da\n"
+					+ "separação de uma classe em duas frentes: a implementação e a abstração. Dessa\n"
+					+ "forma, se monta uma hierarquia baseada em duas ou mais classes distintas, cada\n"
+					+ "parte especializada em uma abordagem, mas ligadas por uma composição.\n"
+					+"Composição que liga as duas pontas representaria a “ponte” de comunicação entre as entidades.\n");
+			System.out.println("No exemplo foi implementado a classe Veículo e a Interface Transporte que fazem parte da abistração"
+					+ "na parte da implementação representa as interfaces criadas que vão definir o comportamento da Abstração.");
+			System.out.println(" ---------------------------------------- ");
+
+	        Caminhao caminhao = new Caminhao("Scania", new Cargas());
+	        caminhao.realizarAtividade();
+
+	        System.out.println(" ---------------------------------------- ");
+
+	        Onibus onibus = new Onibus("Mercedes", new Pessoas());
+	        onibus.realizarAtividade();
+
+	        System.out.println(" ---------------------------------------- ");
+			
+			
+		}	
 			
 		
 			

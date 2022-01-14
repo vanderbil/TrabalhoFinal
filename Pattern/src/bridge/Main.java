@@ -5,6 +5,7 @@ import bridge.Onibus;
 import bridge.Veiculo;
 import bridge.Cargas;
 import bridge.Pessoas;
+import bridge.Transporte;
 
 public class Main {
     public static void main(String[] args) {

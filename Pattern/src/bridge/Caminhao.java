@@ -10,7 +10,7 @@ public class Caminhao extends Veiculo {
 
     @Override
     public void realizarAtividade() {
-        System.out.print(" Caminh√£o " + marca + ": ");
+        System.out.print(" Caminh„o " + marca + ": ");
         this.transporte.transportar();
     }
 }

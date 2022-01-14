@@ -10,7 +10,7 @@ public class Onibus extends Veiculo {
 
     @Override
     public void realizarAtividade() {
-        System.out.print(" Ônibus " + marca + ": ");
+        System.out.print(" Onibus " + marca + ": ");
         this.transporte.transportar();
     }
 }
